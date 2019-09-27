@@ -1,0 +1,117 @@
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IR License Plate</title>
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text:600&display=swap&subset=arabic" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Markazi Text', serif;
+            -webkit-appearance: none;
+        }
+        *::-webkit-inner-spin-button,
+        *::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        body {
+            display: grid;
+            align-content: center;
+            align-items: center;
+            padding: 20px;
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        svg {
+            grid-area: 1 / 1 / span 1 / -1;
+        }
+        select,
+        input {
+            color: green;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            height: 100%;
+            width: 90%;
+            text-align: center;
+            font-size: 12vw;
+            cursor: pointer;
+        }
+        select {
+            width: fit-content;
+            justify-self: center;
+        }
+        option {
+            text-align: center;
+            font-size: 25px;
+        }
+        [name='num'] {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+        [name='char'] {
+            grid-area: 1 / 3 / span 1 / span 1;
+        }
+        p {
+            grid-area: 2 / 1 / span 1 / -1;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" name="num" value="11" max="99" oninput="num(this.value)">
+    <select name="char" onchange="char(this.value)">
+        <option value="ب">ب</option>
+        <option value="ج">ج</option>
+        <option value="د">د</option>
+        <option value="س">س</option>
+        <option value="ص">ص</option>
+        <option value="ط">ط</option>
+        <option value="ق">ق</option>
+        <option value="ل">ل</option>
+        <option value="م">م</option>
+        <option value="ن">ن</option>
+        <option value="و">و</option>
+        <option value="ه">ه</option>
+        <option value="ی">ی</option>
+    </select>
+    <p>
+        <span>-</span>
+        <span>-</span>
+    </p>
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1" viewBox="0 0 600 125"><style>.st2{fill:#fff}</style><path fill="#039" d="M55.3,2.5H11.6C6,2.5,1.5,7,1.5,12.7v100.5c0,5.6,4.5,10.2,10.2,10.2h43.7V2.5z"/><path fill="#239e46" d="M10 15H48V24H10z"/><path d="M10 24H48V33H10z" class="st2"/><path fill="#bc0020" d="M10 33H48V42H10z"/><path d="M10 89.8H8.2V76.7H10V89.8zM15.1 89.8h-1.9v-1.9h1.9V89.8zM20.1 89.8h-1.8V76.7h6.1c2.2 0 4.3.7 4.3 3.5 0 1.9-1 2.7-1.8 3.1.7.3 1.5.6 1.6 2.5l.1 2.4c0 .7.1 1 .7 1.3v.3H27c-.3-.8-.3-2.8-.3-3.3 0-1.1-.2-2.3-2.3-2.3h-4.3V89.8zM20.1 82.7h4.1c1.3 0 2.7-.3 2.7-2.3 0-2-1.5-2.2-2.4-2.2h-4.4V82.7zM33.4 89.8h-1.9v-1.9h1.9V89.8zM10 111.8H8.2V98.6H10V111.8zM15 111.8h-1.8V98.6h6.1c2.2 0 4.3.7 4.3 3.5 0 1.9-1 2.7-1.8 3.1.7.3 1.5.6 1.6 2.5l.1 2.4c0 .7.1 1 .7 1.3v.3H22c-.3-.8-.3-2.8-.3-3.3 0-1.1-.2-2.3-2.3-2.3H15V111.8zM15 104.6h4.1c1.3 0 2.7-.3 2.7-2.3 0-2-1.5-2.2-2.4-2.2H15V104.6zM28.3 107.9l-1.4 3.8h-1.8L30 98.6h2l4.8 13.1h-1.9l-1.3-3.8H28.3zM32.9 106.4l-1.9-5.8h0l-2.1 5.8H32.9zM47.1 98.6h1.7v13.1h-2l-6.7-10.6h0v10.6h-1.7V98.6h2.1l6.6 10.6h0V98.6z" class="st2"/><path d="M464 3H468V124H464zM566 19L546 19 546 15 542 15 542 27 530 27 530 31 546 31 546 23 570 23 570 15 566 15 566 19z"/><path d="M558 31L562 31 562 27 558 27 558 31zM551 31L555 31 555 27 551 27 551 31zM497 15L493 15 493 19 497 19 497 15zM578 15L578 31 582 31 582 15 578 15zM517 19L517 31 521 31 521 15 517 15 517 19z"/><path d="M505 19L505 27 485 27 485 15 481 15 481 31 509 31 509 15 505 15 505 19z"/><g><path fill="#b3b3b3" d="M313 15H350V109H313zM363 15H400V109H363zM413 15H450V109H413zM70 15H107V109H70zM119 15H156V109H119z"/></g><g><path d="M587.9,124.8H12.1c-6.7,0-12.1-5.4-12.1-12.1V12.1C0,5.4,5.4,0,12.1,0h575.7c6.7,0,12.1,5.4,12.1,12.1v100.5 C600,119.4,594.6,124.8,587.9,124.8z M12.1,4C7.6,4,4,7.6,4,12.1v100.5c0,4.5,3.7,8.2,8.2,8.2h575.7c4.5,0,8.2-3.7,8.2-8.2V12.1 c0-4.5-3.7-8.2-8.2-8.2H12.1z"/></g></svg>
+</body>
+    <script>
+        fetch('IranNumberPlate.json').then(r=>{
+           return r.json()
+        }).then(json =>{
+            data = json;
+            num(document.querySelector('input').value)
+        });
+        let state;
+        function num(n) {
+            state = data.findIndex(num =>{return num.number === parseInt(n);})
+            document.querySelectorAll('p span')[0].innerHTML = state >= 0 ? `استان: ${data[state].state}` : `-`;
+            char(document.querySelector('select').value)
+        }
+        function char(c) {
+            let county = state >= 0 ? data[state].characterCounty.findIndex(char =>{return char.char === c || char.char === 'همه'}) : -1;
+            document.querySelectorAll('p span')[1].innerHTML = county >= 0 ?
+            ` - ${data[state].characterCounty[county].county}` :
+            `-`;
+        }
+    </script>
+</html>
